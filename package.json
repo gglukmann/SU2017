@@ -18,6 +18,7 @@
   "homepage": "https://github.com/gglukmann/SU2017#readme",
   "devDependencies": {
     "browser-sync": "^2.18.12",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
   }
 }
