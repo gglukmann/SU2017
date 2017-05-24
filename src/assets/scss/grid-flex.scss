@@ -1,0 +1,45 @@
+// Grid
+$grid-columns: 12;
+$grid-gutter: 20px;
+
+@mixin make-grid($name) {
+  @for $i from 1 through $grid-columns {
+    .grid-flex__col--#{$name}-#{$i} {
+      order: auto;
+      flex-basis: 100% / $grid-columns * $i;
+      max-width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
+.grid-flex {
+  letter-spacing: -.65em;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $grid-gutter * .5 * -1;
+  margin-left: $grid-gutter * .5 * -1;
+  margin-bottom: $grid-gutter * -1;
+}
+
+[class^="grid-flex__col--"] {
+  letter-spacing: 0;
+  text-align: left;
+  display: inline-block;
+  vertical-align: top;
+  flex: 0 0 auto;
+  padding-right: $grid-gutter * .5;
+  padding-left: $grid-gutter * .5;
+  flex-basis: 100%;
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: $grid-gutter;
+  outline: none;
+}
+
+@include make-grid(xs);
+
+@media (min-width: 1024px) {
+  @include make-grid(sm);
+}

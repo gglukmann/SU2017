@@ -1,0 +1,22 @@
+$grid-columns: 12;
+$grid-gutter: 20px;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: $grid-gutter;
+}
+
+@mixin make-grid-grid($name) {
+  @for $i from 1 through $grid-columns {
+    .grid-grid__col--#{$name}-#{$i} {
+      
+    }
+  }
+}
+
+@include make-grid-grid(xs);
+
+@media (min-width: 1024px) {
+  @include make-grid-grid(sm);
+}
