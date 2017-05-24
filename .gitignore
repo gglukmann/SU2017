@@ -60,3 +60,5 @@ typings/
 # idea folder
 .idea
 
+# dist
+src/assets/css/
