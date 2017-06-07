@@ -1,7 +1,34 @@
+$black: #000;
+$grey-d: rgba($black, .85);
+$grey-l: rgba($black, .1);
+$grey-l-2: rgba($black, .05);
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: $grey-d;
+}
+
+.box {
+  border: 1px solid $grey-l;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: $grey-l-2;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.text-center {
+  text-align: center;
 }
