@@ -11,9 +11,9 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('src/assets/scss/*.scss')
+  return gulp.src('src/assets/scss/app.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('src/assets/css'))
+    .pipe(gulp.dest('src/assets/css/'))
     .pipe(browserSync.reload({
       stream: true
     }));
@@ -21,4 +21,5 @@ gulp.task('sass', function () {
 
 gulp.task('watch', ['browserSync', 'sass'], function () {
   gulp.watch('src/assets/scss/*.scss', ['sass']);
+  gulp.watch('src/*.html').on('change', browserSync.reload);
 });

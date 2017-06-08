@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $grey-l;
+}
+
+.container {
+  max-width: $page-max-width;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-left: $grid-gutter * -1;
+  margin-right: $grid-gutter * -1;
+
+  @media (min-width: $break-sm) {
+    flex-direction: row;
+  }
+}
