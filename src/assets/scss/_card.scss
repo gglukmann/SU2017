@@ -1,4 +1,6 @@
 .card {
+  display: flex;
+  flex-direction: column;
   background: $white;
   box-shadow: 0 1px 1px rgba($black, .1);
   margin: $grid-gutter;
@@ -12,7 +14,7 @@
 
 .card__content {
   padding: 15px;
-  order: 0;
+  order: -1;
 }
 
 .card__image {
@@ -23,7 +25,7 @@
 }
 
 .card__image-wrapper {
-  order: 2;
+  order: 1;
 }
 
 @keyframes jump {
