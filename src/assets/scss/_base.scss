@@ -5,6 +5,8 @@
 body {
   margin: 0;
   background: $grey-l;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {

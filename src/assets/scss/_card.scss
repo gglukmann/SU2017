@@ -2,6 +2,7 @@
   background: $white;
   box-shadow: 0 1px 1px rgba($black, .1);
   margin: $grid-gutter;
+  animation: jump 3s;
 }
 
 .card--black {
@@ -23,4 +24,19 @@
 
 .card__image-wrapper {
   order: 2;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -200px);
+  }
+  50% {
+    transform: translate(0, 300px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
