@@ -6,6 +6,7 @@
   "scripts": {
     "build:sass": "node-sass --output-style compressed -o src/assets/css src/assets/scss",
     "watch:sass": "onchange 'src/assets/scss/*.scss' -- npm run build:sass",
+    "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,10 +21,15 @@
   "homepage": "https://github.com/gglukmann/SU2017#readme",
   "devDependencies": {
     "browser-sync": "^2.18.12",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "node-sass": "^4.5.3",
-    "onchange": "^3.2.1"
+    "onchange": "^3.2.1",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1"
   },
   "dependencies": {
     "grunt": "^1.0.1",
