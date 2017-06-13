@@ -4,6 +4,7 @@
   "description": "NG Summer Univeristy 2017 Frontend repo",
   "main": "index.js",
   "scripts": {
+    "sass": "node-sass --output-style compressed -o src/assets/css src/assets/scss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +20,8 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.5.3"
   },
   "dependencies": {
     "grunt": "^1.0.1",
